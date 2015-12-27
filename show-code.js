@@ -4,25 +4,26 @@ var bg = $('#background');
 bg.text(div.html());
 
 var windowHeight = $(window).height();
+var containerHeight = $('#show-code').height();
 var contentHeight = div.height();
 
-console.log('Window Height:', windowHeight);
+console.log('Window Height: ', windowHeight);
 console.log('Content Height: ', contentHeight);
-console.log('Client Height:', document.body.clientHeight);
+console.log('Client Height: ', document.body.clientHeight);
 
 var clientHeight = document.body.clientHeight;
 var backgroundHeight = bg.height();
-var X = (windowHeight - backgroundHeight - 10)/(windowHeight - clientHeight);
+var X = (windowHeight - backgroundHeight)/(windowHeight - clientHeight);
 
 $(document).scroll(function(event) {
 	// parallax();
 });
 
 var parallax = function() {
-	console.log(document.body.scrollTop);
+	// console.log(document.body.scrollTop);
 	var scrollTop = document.body.scrollTop;
 	old = Math.floor(X * scrollTop);
-	if(scrollTop < windowHeight - clientHeight + 5) {
+	if(scrollTop < windowHeight - clientHeight + 10) {
 		document.getElementById('background').style.top = old;
 	}
 

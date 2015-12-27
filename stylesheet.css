@@ -1,5 +1,6 @@
 body {
     background-color: #000000;
+    margin: 0px 10px;
 }
 
 p {
@@ -29,7 +30,7 @@ p {
     max-width: 800px;
     width: 100%;
     background-color: grey;
-    opacity: 0.98;
+    opacity: 0.97;
     z-index: 1;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
