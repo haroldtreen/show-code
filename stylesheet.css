@@ -21,6 +21,8 @@ p {
     left: 0;
     width: 100%;
     z-index: -1;
+    margin: 0px;
+    padding: 0px;
 }
 
 #content {
@@ -29,4 +31,5 @@ p {
     background-color: grey;
     opacity: 0.98;
     z-index: 1;
+    margin-bottom: 10px;
 }
