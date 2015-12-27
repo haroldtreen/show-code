@@ -1,0 +1,32 @@
+body {
+    background-color: #000000;
+}
+
+p {
+    font-size: 18pt;
+}
+
+#show-code {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#background {
+    font-size: 20pt;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#content {
+    max-width: 800px;
+    width: 100%;
+    background-color: grey;
+    opacity: 0.98;
+    z-index: 1;
+}
