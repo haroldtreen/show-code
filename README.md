@@ -10,4 +10,4 @@ open http://localhost:3000/
 ```
 
 ## Example:
-
+![Example](https://raw.githubusercontent.com/haroldtreen/show-code/master/example.png)
