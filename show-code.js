@@ -25,8 +25,8 @@ var setupVariables = function() {
     clientHeight = document.body.clientHeight;
     backgroundHeight = $bg.height();
 
-    maxBackgroundTop = containerHeight - backgroundHeight;
     maxContainerScroll = containerHeight - clientHeight;
+    maxBackgroundTop = Math.min(0, containerHeight - backgroundHeight); // 0 if container is bigger then background
 
     scrollMultiplier = maxBackgroundTop / maxContainerScroll;
 

@@ -13,7 +13,6 @@ p {
     width: 100%;
     overflow: hidden;
     position: relative;
-    border: medium dashed green;
 }
 
 #sc-background {
