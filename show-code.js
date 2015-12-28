@@ -1,50 +1,66 @@
-var div = $('#content');
-var bg = $('#background');
+var $content = $('#sc-content');
+var $bg = $('#sc-background');
+var $container = $('#show-code');
 
-bg.text(div.html());
+var windowHeight;
+var containerHeight;
+var offsetTop;
 
-var windowHeight = $(window).height();
-var containerHeight = $('#show-code').height();
-var contentHeight = div.height();
+var clientHeight;
+var backgroundHeight;
 
-console.log('Window Height: ', windowHeight);
-console.log('Content Height: ', contentHeight);
-console.log('Client Height: ', document.body.clientHeight);
+var maxBackgroundTop;
+var maxContainerScroll;
 
-var clientHeight = document.body.clientHeight;
-var backgroundHeight = bg.height();
-var X = (windowHeight - backgroundHeight)/(windowHeight - clientHeight);
+var scrollMultiplier;
 
-$(document).scroll(function(event) {
-	// parallax();
-});
+var maxScrollTop;
 
-var parallax = function() {
-	// console.log(document.body.scrollTop);
-	var scrollTop = document.body.scrollTop;
-	old = Math.floor(X * scrollTop);
-	if(scrollTop < windowHeight - clientHeight + 10) {
-		document.getElementById('background').style.top = old;
-	}
+var oldTop;
 
-	window.requestAnimationFrame(parallax);
+var setupVariables = function() {
+    windowHeight = $(window).height();
+    containerHeight = $container.height();
+    offsetTop = $container.offset().top;
+
+    clientHeight = document.body.clientHeight;
+    backgroundHeight = $bg.height();
+
+    maxBackgroundTop = containerHeight - backgroundHeight;
+    maxContainerScroll = containerHeight - clientHeight;
+
+    scrollMultiplier = maxBackgroundTop / maxContainerScroll;
+
+    maxScrollTop = windowHeight - clientHeight + 10; // To avoid rubber band jitter
 };
 
-window.requestAnimationFrame(parallax);
+var updateBackground = function() {
+    var scrollTop = document.body.scrollTop; // Get global scroll position
+    var containerScroll = Math.max(0, scrollTop - offsetTop); // Convert to container scroll position
+    var backgroundScroll = Math.floor(containerScroll * scrollMultiplier); // Calculate background scroll postion
+    var top = Math.max(maxBackgroundTop, backgroundScroll); // Choose the max
 
-/*
+    // Scroll background if it has changed and scroll is not overshooting
+    if (scrollTop < maxScrollTop && top !== oldTop) {
+        // document.getElementById('sc-background').style.top = top;
+        $bg.css({ top: top + 'px' });
 
-Window Height -
-backgroundHeight - client = top
-backgroundHeight - top = client
-backgroundHeight - client*X = 0
-backgroundHeight/X = client
-backgroundHeight/client = X
+        oldTop = top;
+    }
+};
 
-Input: 0 -> windowHeight - clientHeight;
-Output: 0 -> windowclientHeight - backgroundHeight;
+var parallax = function() {
+    updateBackground();
+    window.requestAnimationFrame(parallax);
+};
 
-X * (windowHeight - clientHeight) = clientHeight - backgroundHeight;
+var showCodeStart = function() {
+    $bg.text($content.html());
+    setupVariables();
+    window.addEventListener('resize', function() {
+        setupVariables();
+    });
+    window.requestAnimationFrame(parallax);
+};
 
-top -> 0 / clientHeight - backgroundHeight
-*/
+showCodeStart();

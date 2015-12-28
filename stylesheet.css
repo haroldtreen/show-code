@@ -13,9 +13,10 @@ p {
     width: 100%;
     overflow: hidden;
     position: relative;
+    border: medium dashed green;
 }
 
-#background {
+#sc-background {
     font-size: 20pt;
     position: absolute;
     top: 0;
@@ -26,11 +27,15 @@ p {
     padding: 0px;
 }
 
-#content {
+#sc-content {
     max-width: 800px;
     width: 100%;
     background-color: grey;
     opacity: 0.97;
     z-index: 1;
     margin-bottom: 20px;
+}
+
+.space {
+    height: 100px;
 }

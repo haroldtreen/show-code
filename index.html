@@ -5,172 +5,174 @@
 
 	<head>
 	<body>
-		<!-- <div>Stuff in here <br> stuff</div> -->
+		<div class='space'>Stuff in here <br> stuff</div>
 		<div id="show-code">
-			<code id="background" class="language-markup"></code>
-			<div id="content">
-				<head>
-    <meta charset="utf-8">
+			<code id="sc-background" class="language-markup"></code>
+			<div id="sc-content">
+								<head>
+				    <meta charset="utf-8">
 
-    <title>doc</title>
-    <style>
-      /*github.com style (c) Vasily Polovnyov <vast@whiteants.net>*/
-      pre code {
-        display: block; padding: 0.5em;
-        color: #333;
-        background: #f8f8ff
-      }
-      pre .comment,
-      pre .template_comment,
-      pre .diff .header,
-      pre .javadoc {
-        color: #998;
-        font-style: italic
-      }
-      pre .keyword,
-      pre .css .rule .keyword,
-      pre .winutils,
-      pre .javascript .title,
-      pre .nginx .title,
-      pre .subst,
-      pre .request,
-      pre .status {
-        color: #333;
-        font-weight: bold
-      }
-      pre .number,
-      pre .hexcolor,
-      pre .ruby .constant {
-        color: #099;
-      }
-      pre .string,
-      pre .tag .value,
-      pre .phpdoc,
-      pre .tex .formula {
-        color: #d14
-      }
-      pre .title,
-      pre .id {
-        color: #900;
-        font-weight: bold
-      }
-      pre .javascript .title,
-      pre .lisp .title,
-      pre .clojure .title,
-      pre .subst {
-        font-weight: normal
-      }
-      pre .class .title,
-      pre .haskell .type,
-      pre .vhdl .literal,
-      pre .tex .command {
-        color: #458;
-        font-weight: bold
-      }
-      pre .tag,
-      pre .tag .title,
-      pre .rules .property,
-      pre .django .tag .keyword {
-        color: #000080;
-        font-weight: normal
-      }
-      pre .attribute,
-      pre .variable,
-      pre .lisp .body {
-        color: #008080
-      }
-      pre .regexp {
-        color: #009926
-      }
-      pre .class {
-        color: #458;
-        font-weight: bold
-      }
-      pre .symbol,
-      pre .ruby .symbol .string,
-      pre .lisp .keyword,
-      pre .tex .special,
-      pre .prompt {
-        color: #990073
-      }
-      pre .built_in,
-      pre .lisp .title,
-      pre .clojure .built_in {
-        color: #0086b3
-      }
-      pre .preprocessor,
-      pre .pi,
-      pre .doctype,
-      pre .shebang,
-      pre .cdata {
-        color: #999;
-        font-weight: bold
-      }
-      pre .deletion {
-        background: #fdd
-      }
-      pre .addition {
-        background: #dfd
-      }
-      pre .diff .change {
-        background: #0086b3
-      }
-      pre .chunk {
-        color: #aaa
-      }
-    </style>
-  </head>
-  <body>
-    <h2 class='cntr'>About</h2>
+				    <title>doc</title>
+				    <style>
+				      /*github.com style (c) Vasily Polovnyov <vast@whiteants.net>*/
+				      pre code {
+				        display: block; padding: 0.5em;
+				        color: #333;
+				        background: #f8f8ff
+				      }
+				      pre .comment,
+				      pre .template_comment,
+				      pre .diff .header,
+				      pre .javadoc {
+				        color: #998;
+				        font-style: italic
+				      }
+				      pre .keyword,
+				      pre .css .rule .keyword,
+				      pre .winutils,
+				      pre .javascript .title,
+				      pre .nginx .title,
+				      pre .subst,
+				      pre .request,
+				      pre .status {
+				        color: #333;
+				        font-weight: bold
+				      }
+				      pre .number,
+				      pre .hexcolor,
+				      pre .ruby .constant {
+				        color: #099;
+				      }
+				      pre .string,
+				      pre .tag .value,
+				      pre .phpdoc,
+				      pre .tex .formula {
+				        color: #d14
+				      }
+				      pre .title,
+				      pre .id {
+				        color: #900;
+				        font-weight: bold
+				      }
+				      pre .javascript .title,
+				      pre .lisp .title,
+				      pre .clojure .title,
+				      pre .subst {
+				        font-weight: normal
+				      }
+				      pre .class .title,
+				      pre .haskell .type,
+				      pre .vhdl .literal,
+				      pre .tex .command {
+				        color: #458;
+				        font-weight: bold
+				      }
+				      pre .tag,
+				      pre .tag .title,
+				      pre .rules .property,
+				      pre .django .tag .keyword {
+				        color: #000080;
+				        font-weight: normal
+				      }
+				      pre .attribute,
+				      pre .variable,
+				      pre .lisp .body {
+				        color: #008080
+				      }
+				      pre .regexp {
+				        color: #009926
+				      }
+				      pre .class {
+				        color: #458;
+				        font-weight: bold
+				      }
+				      pre .symbol,
+				      pre .ruby .symbol .string,
+				      pre .lisp .keyword,
+				      pre .tex .special,
+				      pre .prompt {
+				        color: #990073
+				      }
+				      pre .built_in,
+				      pre .lisp .title,
+				      pre .clojure .built_in {
+				        color: #0086b3
+				      }
+				      pre .preprocessor,
+				      pre .pi,
+				      pre .doctype,
+				      pre .shebang,
+				      pre .cdata {
+				        color: #999;
+				        font-weight: bold
+				      }
+				      pre .deletion {
+				        background: #fdd
+				      }
+				      pre .addition {
+				        background: #dfd
+				      }
+				      pre .diff .change {
+				        background: #0086b3
+				      }
+				      pre .chunk {
+				        color: #aaa
+				      }
+				    </style>
+				  </head>
+				  <body>
+				    <h2 class='cntr'>About</h2>
 
-<h3 id="hello-">Hello,</h3>
-<p>My name is Harold Treen. Here&#39;s a little bit about what I do.</p>
-<h3 id="for-school">For School</h3>
-<h4 id="university">University</h4>
-<p><strong>Queen&#39;s University</strong> - Kingston, Ontario</p>
-<p>B.A.Sc. Computer Engineering with Professional Internship</p>
-<p>Studied for 3 years, did a 12-month internship at Pivotal Labs and now I&#39;m back completing my 4th year of classes.</p>
-<p>Some of my favorite courses:</p>
-<ul>
-<li>Data Mining: Studied machine learning algorithms for analyzing large datasets.</li>
-<li>Computer Architecture: Built a processor from scratch using Verilog (about 150 hours of my life I&#39;ll never get back...).</li>
-<li>Neural Networks: Built neural networks and studied their applications in a variety of fields.</li>
-<li>Fundamentals of Software Development: Built software for controlling a computer using gesture recognition.</li>
-</ul>
-<h4 id="high-school">High School</h4>
-<p><strong>Ursula Franklin Academy</strong> - Toronto, Ontario</p>
-<h3 id="for-work">For Work</h3>
-<p>During my time in school, I&#39;ve had the opportunity to work at some wonderful companies:</p>
-<p><strong>Pivotal Labs</strong><br>
-Software Engineer Intern - Toronto, Ontario</p>
-<p><strong>Microsoft Corporation</strong><br>
-SDET Intern (Microsoft Office Division) - Redmond, Washington</p>
-<p><strong>Xtreme Labs Inc.</strong><br>
-Agile Test Engineer Intern - Toronto, Ontario</p>
-<p>More information can be found on my <a onclick="app.load('resume')">resume</a>.</p>
-<h3 id="for-fun">For Fun</h3>
-<p>My interests have been in constant flux since the beginning of time. I am unable to describe them all in a sentence, but here are some of my activities and maybe you can summarize them better then I can...</p>
-<ul>
-<li><strong>Unicycling</strong>: I was a member of the <a href="http://torontounicyclists.ca/">Toronto Unicycle Club</a> for 3 years. This involved playing a lot of unicycle basketball, unicycle flaming-puck hockey and riding in parades.</li>
-<li><strong>Archery</strong>: I was a recurve archer for ~3 years with <a href="http://torontoschoolofarchery.ca/">Toronto School of Archery</a>. In that time I won a few provincial competitions and even placed 1st at the Canadian indoors.</li>
-<li><strong>Swimming</strong>: Swam for 3 years on the high school swim team as well as getting swim training all the way up to my bronze cross.</li>
-<li><strong>Rubik&#39;s Cube</strong>: Got really into speed cubing for a while. My record for solving was 30 seconds...back in Grade 9.</li>
-<li><strong>School Politics</strong>: I was the only person in my year to serve on student council for all 4 years of high school. I attribute this to solving a rubik&#39;s cube during my speech in grade 9 and name recognition from then on.</li>
-<li><strong>Ballroom Dance</strong>: I took ballroom dance lessons for 2 years during high school. It was where I spent most of my time and by the second year I was teaching the beginner classes. Learned Salsa, Rumba, ChaCha, Paso Doble, Merengue, Bachata, Tango, Waltz, Quick Step, Foxtrot, Samba, Hip Hop... breadth not depth.</li>
-<li><strong>All The Dancing</strong>: You will frequently find me dancing up a storm whenever I&#39;m out. I don&#39;t think it follows any style...it&#39;s just &quot;The Harold Dance&quot;.</li>
-<li><strong>Web Development</strong>: My sister came home with a book on HTML when I was in Grade 7 and I was hooked. During high school I had dreams of building my own website from scratch and making 300,000$ a month from affiliate marketing. My first site was &quot;your-cheap-laptops.com&quot;. It never worked out, but probably for the better...</li>
-<li><strong>Travel</strong>: One of those generic things that all lists of interests should include. My list of countries include: Italy, Britain, Germany, Austria, Czech Republic, Switzerland, Netherlands, Thailand, Singapore, Hong Kong and Japan...as well as Canada and the US (...Duh).</li>
-<li><strong>Couchsurfing</strong>: This kind of falls under travel, but is also a community I&#39;ve been involved in even at home. For those with profiles you can stalk me <a href="https://www.couchsurfing.com/users/2104797/profile">here</a>.</li>
-<li><strong>Hackathons / Random Projects</strong>: I coding random projects every once in a while. But I have a project section for that <a onclick="app.load('projects')">here</a>.</li>
-<li><strong>Bicycles</strong>: Not just cycling! In fact I probably enjoy fixing/working with bikes more then riding them. In 2012 I built a bike out of scraps and rode it 330km to Kingston. Since then I have been upgrading that bike and continue to ride it between Kingston/Toronto when weather permits.</li>
-<li><strong>Cellphone Hacking</strong>: Started with jailbreaking my sisters first generation iPod Touch. When I got my Android phone I also got into &quot;rooting&quot; and other customizations. I even ran a business after 1st year university where I would unlock people&#39;s android phones...it was sketchy.</li>
-<li><strong>Stocks / Finances</strong>: I&#39;ve been managing my own stock portfolio since 2012. I have no clue what I&#39;m doing but following &quot;Buy High, Sell Low&quot; and &quot;Diversify your portfolio&quot; has caused it to grow 25%+ since then...so not bad. </li>
-</ul>
-<p>I&#39;ll leave it at that...</p>
+				<h3 id="hello-">Hello,</h3>
+				<p>My name is Harold Treen. Here&#39;s a little bit about what I do.</p>
+				<h3 id="for-school">For School</h3>
+				<h4 id="university">University</h4>
+				<p><strong>Queen&#39;s University</strong> - Kingston, Ontario</p>
+				<p>B.A.Sc. Computer Engineering with Professional Internship</p>
+				<p>Studied for 3 years, did a 12-month internship at Pivotal Labs and now I&#39;m back completing my 4th year of classes.</p>
+				<p>Some of my favorite courses:</p>
+				<ul>
+				<li>Data Mining: Studied machine learning algorithms for analyzing large datasets.</li>
+				<li>Computer Architecture: Built a processor from scratch using Verilog (about 150 hours of my life I&#39;ll never get back...).</li>
+				<li>Neural Networks: Built neural networks and studied their applications in a variety of fields.</li>
+				<li>Fundamentals of Software Development: Built software for controlling a computer using gesture recognition.</li>
+				</ul>
+				<h4 id="high-school">High School</h4>
+				<p><strong>Ursula Franklin Academy</strong> - Toronto, Ontario</p>
+				<h3 id="for-work">For Work</h3>
+				<p>During my time in school, I&#39;ve had the opportunity to work at some wonderful companies:</p>
+				<p><strong>Pivotal Labs</strong><br>
+				Software Engineer Intern - Toronto, Ontario</p>
+				<p><strong>Microsoft Corporation</strong><br>
+				SDET Intern (Microsoft Office Division) - Redmond, Washington</p>
+				<p><strong>Xtreme Labs Inc.</strong><br>
+				Agile Test Engineer Intern - Toronto, Ontario</p>
+				<p>More information can be found on my <a onclick="app.load('resume')">resume</a>.</p>
+				<h3 id="for-fun">For Fun</h3>
+				<p>My interests have been in constant flux since the beginning of time. I am unable to describe them all in a sentence, but here are some of my activities and maybe you can summarize them better then I can...</p>
+				<ul>
+				<li><strong>Unicycling</strong>: I was a member of the <a href="http://torontounicyclists.ca/">Toronto Unicycle Club</a> for 3 years. This involved playing a lot of unicycle basketball, unicycle flaming-puck hockey and riding in parades.</li>
+				<li><strong>Archery</strong>: I was a recurve archer for ~3 years with <a href="http://torontoschoolofarchery.ca/">Toronto School of Archery</a>. In that time I won a few provincial competitions and even placed 1st at the Canadian indoors.</li>
+				<li><strong>Swimming</strong>: Swam for 3 years on the high school swim team as well as getting swim training all the way up to my bronze cross.</li>
+				<li><strong>Rubik&#39;s Cube</strong>: Got really into speed cubing for a while. My record for solving was 30 seconds...back in Grade 9.</li>
+				<li><strong>School Politics</strong>: I was the only person in my year to serve on student council for all 4 years of high school. I attribute this to solving a rubik&#39;s cube during my speech in grade 9 and name recognition from then on.</li>
+				<li><strong>Ballroom Dance</strong>: I took ballroom dance lessons for 2 years during high school. It was where I spent most of my time and by the second year I was teaching the beginner classes. Learned Salsa, Rumba, ChaCha, Paso Doble, Merengue, Bachata, Tango, Waltz, Quick Step, Foxtrot, Samba, Hip Hop... breadth not depth.</li>
+				<li><strong>All The Dancing</strong>: You will frequently find me dancing up a storm whenever I&#39;m out. I don&#39;t think it follows any style...it&#39;s just &quot;The Harold Dance&quot;.</li>
+				<li><strong>Web Development</strong>: My sister came home with a book on HTML when I was in Grade 7 and I was hooked. During high school I had dreams of building my own website from scratch and making 300,000$ a month from affiliate marketing. My first site was &quot;your-cheap-laptops.com&quot;. It never worked out, but probably for the better...</li>
+				<li><strong>Travel</strong>: One of those generic things that all lists of interests should include. My list of countries include: Italy, Britain, Germany, Austria, Czech Republic, Switzerland, Netherlands, Thailand, Singapore, Hong Kong and Japan...as well as Canada and the US (...Duh).</li>
+				<li><strong>Couchsurfing</strong>: This kind of falls under travel, but is also a community I&#39;ve been involved in even at home. For those with profiles you can stalk me <a href="https://www.couchsurfing.com/users/2104797/profile">here</a>.</li>
+				<li><strong>Hackathons / Random Projects</strong>: I coding random projects every once in a while. But I have a project section for that <a onclick="app.load('projects')">here</a>.</li>
+				<li><strong>Bicycles</strong>: Not just cycling! In fact I probably enjoy fixing/working with bikes more then riding them. In 2012 I built a bike out of scraps and rode it 330km to Kingston. Since then I have been upgrading that bike and continue to ride it between Kingston/Toronto when weather permits.</li>
+				<li><strong>Cellphone Hacking</strong>: Started with jailbreaking my sisters first generation iPod Touch. When I got my Android phone I also got into &quot;rooting&quot; and other customizations. I even ran a business after 1st year university where I would unlock people&#39;s android phones...it was sketchy.</li>
+				<li><strong>Stocks / Finances</strong>: I&#39;ve been managing my own stock portfolio since 2012. I have no clue what I&#39;m doing but following &quot;Buy High, Sell Low&quot; and &quot;Diversify your portfolio&quot; has caused it to grow 25%+ since then...so not bad. </li>
+				</ul>
+				<p>I&#39;ll leave it at that...</p>
 
-  </body>
+				</body>
 			</div>
 		</div>
+
+		<div class='space'>Stuff in here <br> stuff</div>
 
 		<script src="prism.js"></script>
 		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
