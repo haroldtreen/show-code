@@ -1,6 +1,5 @@
-var $content = $('#sc-content');
-var $bg = $('#sc-background');
-var $container = $('#show-code');
+var $container;
+var $bg;
 
 var windowHeight;
 var containerHeight;
@@ -54,8 +53,20 @@ var parallax = function() {
     window.requestAnimationFrame(parallax);
 };
 
+var createBackground = function() {
+    var bg = document.createElement('code');
+    bg.id = 'sc-background';
+    bg.className = 'language-markup';
+    return $(bg);
+};
+
 var showCodeStart = function() {
-    $bg.text($content.html());
+    $bg = createBackground();
+    $container = $('#show-code');
+
+    $bg.text($container.html());
+    $container.prepend($bg);
+
     setupVariables();
     window.addEventListener('resize', function() {
         setupVariables();
