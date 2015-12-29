@@ -18,8 +18,7 @@
     };
 
     var setupVariables = function() {
-        var windowHeight = document.documentElement.clientHeight;
-        var clientHeight = document.body.clientHeight;
+        var clientHeight = window.innerHeight;
 
         var containerDims = getDimensions(containerEl);
         var backgroundDims = getDimensions(backgroundEl);
@@ -30,8 +29,6 @@
         maxBackgroundTop = Math.min(0, containerDims.height - backgroundDims.height); // 0 if container is bigger then background
 
         scrollMultiplier = maxBackgroundTop / maxContainerTop;
-
-        maxScrollTop = windowHeight - clientHeight + 10; // To avoid rubber band jitter
     };
 
     var updateBackground = function() {
@@ -41,7 +38,7 @@
         var top = Math.max(maxBackgroundTop, backgroundScroll);
 
         // Scroll background if it has changed and scroll is not overshooting
-        if (scrollTop < maxScrollTop && top !== oldTop) {
+        if (top !== oldTop) {
             backgroundEl.style.top = top;
             oldTop = top;
             window.requestAnimationFrame(updateBackground);
