@@ -1,0 +1,26 @@
+body {
+    background-color: #000000;
+    margin: 0px 10px;
+}
+
+p {
+    font-size: 18pt;
+}
+
+#show-code {
+	display: flex;
+	justify-content: center;
+}
+
+#content {
+    max-width: 800px;
+    width: 100%;
+    background-color: grey;
+    opacity: 0.97;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.space {
+    height: 100px;
+}
