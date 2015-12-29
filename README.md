@@ -39,6 +39,16 @@ Using the source code in a container as the background for the container.
   </body>
   ```
 
+## Customization
+
+When the background is injected it will have the `sc-background` ID. Using this selector, you can apply custom styles to your background.
+
+```css
+#sc-background {
+    border-radius: 5px;
+}
+```
+
 ## Example:
 ```
 npm install -g serve
