@@ -1,16 +1,17 @@
 (function() {
     // Cached variables
-    var isAnimating = false;
     var containerEl;
     var backgroundEl;
 
     var containerTop;
+    var scrollTop;
 
     var scrollMultiplier;
     var maxBackgroundTop;
     var maxScrollTop;
 
     var oldTop;
+    var isAnimating = false;
 
     var getDimensions = function(elem) {
         return elem.getBoundingClientRect();
@@ -34,7 +35,6 @@
     };
 
     var updateBackground = function() {
-        var scrollTop = document.body.scrollTop; // Get global scroll position
         var containerScroll = Math.max(0, scrollTop - containerTop); // Convert to container scroll position
         var backgroundScroll = Math.floor(containerScroll * scrollMultiplier); // Calculate background scroll postion
 
@@ -59,9 +59,20 @@
     };
 
     var parallax = function() {
+        scrollTop = document.body.scrollTop; // Set only for resize/scroll
         if (!isAnimating) {
             updateBackground();
         }
+    };
+
+    var setupEventListeners = function() {
+        window.addEventListener('resize', function() {
+            setupVariables();
+            parallax();
+        });
+        document.addEventListener('scroll', function() {
+            parallax();
+        });
     };
 
     var showCodeStart = function() {
@@ -72,13 +83,7 @@
         containerEl.appendChild(backgroundEl);
 
         setupVariables();
-        window.addEventListener('resize', function() {
-            setupVariables();
-            parallax();
-        });
-        document.addEventListener('scroll', function() {
-            parallax();
-        });
+        setupEventListeners();
     };
 
     showCodeStart();
