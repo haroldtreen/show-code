@@ -1,0 +1,30 @@
+{
+  "name": "show-code",
+  "version": "0.5.0",
+  "description": "Use the source code of a container as the background for that container!",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haroldtreen/show-code.git"
+  },
+  "keywords": [
+    "client",
+    "source",
+    "code",
+    "frontend",
+    "plugin",
+    "ui"
+  ],
+  "author": "Harold Treen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haroldtreen/show-code/issues"
+  },
+  "homepage": "https://github.com/haroldtreen/show-code#readme"
+}
