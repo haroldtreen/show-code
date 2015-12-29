@@ -1,10 +1,10 @@
 (function() {
     // Cached variables
+    var isAnimating = false;
     var containerEl;
     var backgroundEl;
 
-    var backgroundDims;
-    var containerDims;
+    var containerTop;
 
     var scrollMultiplier;
     var maxBackgroundTop;
@@ -20,8 +20,10 @@
         var windowHeight = document.documentElement.clientHeight;
         var clientHeight = document.body.clientHeight;
 
-        containerDims = getDimensions(containerEl);
-        backgroundDims = getDimensions(backgroundEl);
+        var containerDims = getDimensions(containerEl);
+        var backgroundDims = getDimensions(backgroundEl);
+
+        containerTop = containerDims.top + document.body.scrollTop; // Want top position when not scrolled
 
         var maxContainerTop = containerDims.height - clientHeight;
         maxBackgroundTop = Math.min(0, containerDims.height - backgroundDims.height); // 0 if container is bigger then background
@@ -33,7 +35,7 @@
 
     var updateBackground = function() {
         var scrollTop = document.body.scrollTop; // Get global scroll position
-        var containerScroll = Math.max(0, scrollTop - containerDims.top); // Convert to container scroll position
+        var containerScroll = Math.max(0, scrollTop - containerTop); // Convert to container scroll position
         var backgroundScroll = Math.floor(containerScroll * scrollMultiplier); // Calculate background scroll postion
 
         var top = Math.max(maxBackgroundTop, backgroundScroll);
@@ -42,12 +44,11 @@
         if (scrollTop < maxScrollTop && top !== oldTop) {
             backgroundEl.style.top = top;
             oldTop = top;
+            window.requestAnimationFrame(updateBackground);
+            isAnimating = true;
+        } else {
+            isAnimating = false;
         }
-    };
-
-    var parallax = function() {
-        updateBackground();
-        window.requestAnimationFrame(parallax);
     };
 
     var createBackground = function() {
@@ -55,6 +56,12 @@
         bg.id = 'sc-background';
         bg.className = 'language-markup';
         return bg;
+    };
+
+    var parallax = function() {
+        if (!isAnimating) {
+            updateBackground();
+        }
     };
 
     var showCodeStart = function() {
@@ -67,8 +74,11 @@
         setupVariables();
         window.addEventListener('resize', function() {
             setupVariables();
+            parallax();
         });
-        window.requestAnimationFrame(parallax);
+        document.addEventListener('scroll', function() {
+            parallax();
+        });
     };
 
     showCodeStart();
