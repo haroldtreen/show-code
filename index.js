@@ -8,7 +8,6 @@
 
     var scrollMultiplier;
     var maxBackgroundTop;
-    var maxScrollTop;
 
     var oldTop;
     var isAnimating = false;
@@ -39,7 +38,7 @@
 
         // Scroll background if it has changed and scroll is not overshooting
         if (top !== oldTop) {
-            backgroundEl.style.top = top;
+            backgroundEl.style.top = top + 'px';
             oldTop = top;
             window.requestAnimationFrame(updateBackground);
             isAnimating = true;
