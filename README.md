@@ -4,11 +4,11 @@ Using the source code in a container as the background for the container.
 ## Usage
 
 1. Install the npm package
-```
+```bash
 npm install show-code --save
 ```
 
-1. Include the show-code js/css in your HTML
+2. Include the show-code js/css in your HTML
 ```html
 <head>
         <!-- Head contents -->
@@ -20,13 +20,14 @@ npm install show-code --save
 </body>
 ```
 
-1. The add `show-code` ID to a container
-```
+3. The add `show-code` ID to a container
+```html
 <div id='show-code'>
     <span>All your content!</span>
 </div>
 ```
-1. **Bonus:** Add external libraries like [Prism](http://prismjs.com/index.html) for syntax highlighting.
+
+4. **Bonus:** Add external libraries like [Prism](http://prismjs.com/index.html) for syntax highlighting.
 ```html
 <head>
         <!-- Head contents -->
