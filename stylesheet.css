@@ -2,6 +2,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    z-index: -1;
 }
 
 #sc-background {
@@ -13,4 +14,5 @@
     z-index: -1;
     margin: 0px;
     padding: 0px;
+    border: 0px;
 }
