@@ -17,12 +17,15 @@ Using the source code in a container as the background for the container.
   <body>
         <!-- Body contents -->
         <script type="text/javascript" src="node-modules/show-code/index.js"></script>
+        <script>
+            window.showCode(); // Run when your container is ready
+        </script>
   </body>
   ```
 
 3. The add `show-code` ID to a container
   ```html
-  <div id='show-code'>
+  <div id='sc-container'>
         <span>All your content!</span>
   </div>
   ```
@@ -50,11 +53,13 @@ When the background is injected it will have the `sc-background` ID. Using this 
 ```
 
 ## Example:
-```
-npm install -g serve
-cd show-code
-serve
-open http://localhost:3000/example/
-```
+See it in action [here](https://haroldtreen.github.io/show-code/)
 
-![Example](https://raw.githubusercontent.com/haroldtreen/show-code/master/example/example.png)
+or
+
+```bash
+npm install -g serve
+git clone git@github:haroldtreen/show-code --branch gh-pages
+serve show-code
+open http://127.0.0.1:3000/
+```
