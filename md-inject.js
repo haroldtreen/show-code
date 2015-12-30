@@ -1,5 +1,5 @@
 var mdUrls = [
-    '../README.md'
+    './README.md'
 ];
 
 var contentSelector = '#content';
