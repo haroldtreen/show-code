@@ -55,7 +55,7 @@ When the background is injected it will have the `sc-background` ID. Using this 
 ## Example:
 See it in action [here](https://haroldtreen.github.io/show-code/)
 
-or
+**OR**
 
 ```bash
 npm install -g serve

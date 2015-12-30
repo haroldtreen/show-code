@@ -1,5 +1,5 @@
 var mdUrls = [
-    'https://cdn.rawgit.com/haroldtreen/show-code/master/README.md'
+    '../README.md'
 ];
 
 var contentSelector = '#content';
