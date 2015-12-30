@@ -1,0 +1,29 @@
+body {
+    background-color: #000000;
+    margin: 0px 0px;
+}
+
+#sc-container {
+	display: flex;
+	justify-content: center;
+	background-color: #000000;
+}
+
+#sc-background {
+	font-size: 40px;
+	padding: 0px 10px;
+}
+
+#content {
+    max-width: 800px;
+    width: 100%;
+    background-color: #dfdfdf;
+    z-index: 1;
+    margin: 20px 0px;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+img {
+	max-width: 800px;
+}
