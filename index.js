@@ -1,4 +1,4 @@
-(function() {
+(function(global) {
     // Cached variables
     var containerEl;
     var backgroundEl;
@@ -71,9 +71,9 @@
         });
     };
 
-    var showCodeStart = function() {
+    var showCode = function() {
         backgroundEl = createBackground();
-        containerEl = document.getElementById('show-code');
+        containerEl = document.getElementById('sc-container');
 
         backgroundEl.textContent = containerEl.innerHTML;
         containerEl.appendChild(backgroundEl);
@@ -82,5 +82,5 @@
         setupEventListeners();
     };
 
-    showCodeStart();
-})();
+    global.showCode = showCode;
+})(window);
