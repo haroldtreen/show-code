@@ -26,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/haroldtreen/show-code/issues"
   },
-  "homepage": "https://github.com/haroldtreen/show-code#readme"
+  "homepage": "https://github.com/haroldtreen/show-code#readme",
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1"
+  }
 }
