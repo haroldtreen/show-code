@@ -1,3 +1,5 @@
+(function(global) {
+
 // Cached variables
 var containerEl;
 var backgroundEl;
@@ -61,11 +63,11 @@ var parallax = function() {
 };
 
 var setupEventListeners = function() {
-    window.addEventListener('resize', () => {
+    window.addEventListener('resize', function() {
         setupVariables();
         parallax();
     });
-    document.addEventListener('scroll', () => {
+    document.addEventListener('scroll', function() {
         parallax();
     });
 };
@@ -83,4 +85,5 @@ var showCode = function() {
     }
 };
 
-module.export = showCode;
+global.showCode = showCode;
+})(window);
