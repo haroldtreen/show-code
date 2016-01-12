@@ -12,11 +12,11 @@ Using the source code in a container as the background for the container.
   ```html
   <head>
         <!-- Head contents -->
-        <link rel="stylesheet" type="text/css" href="node-modules/show-code/stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="node-modules/show-code/build/show-code.min.css">
   </head>
   <body>
         <!-- Body contents -->
-        <script type="text/javascript" src="node-modules/show-code/index.js"></script>
+        <script type="text/javascript" src="node-modules/show-code/build/show-code.min.js"></script>
         <script>
             window.showCode(); // Run when your container is ready
         </script>
