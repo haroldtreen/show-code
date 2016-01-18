@@ -74,7 +74,7 @@ var setupEventListeners = function() {
 
 var showCode = function() {
     backgroundEl = createBackground();
-    containerEl = document.getElementById('show-code');
+    containerEl = document.getElementById('sc-container');
 
     backgroundEl.textContent = containerEl.innerHTML;
     containerEl.appendChild(backgroundEl);
