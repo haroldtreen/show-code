@@ -17,10 +17,11 @@ body {
 #content {
     max-width: 800px;
     width: 100%;
+    min-width: 0px;
     background-color: #dfdfdf;
     z-index: 1;
-    margin: 20px 0px;
-	padding: 30px;
+    margin: 50px 10px;
+	padding: 20px;
 	border-radius: 10px;
 }
 
