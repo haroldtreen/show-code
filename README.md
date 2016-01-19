@@ -23,7 +23,7 @@ Using the source code in a container as the background for the container.
   </body>
   ```
 
-3. The add `show-code` ID to a container
+3. The add `sc-container` ID to a container
   ```html
   <div id='sc-container'>
         <span>All your content!</span>
