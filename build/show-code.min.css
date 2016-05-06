@@ -1,1 +1,1 @@
-#sc-container{width:100%;overflow:hidden;position:relative;z-index:0}#sc-background{font-size:20pt;position:absolute;top:0;left:0;width:100%;z-index:-1;margin:0;padding:0;border:0}
+#sc-container{width:100%;height:inherit;position:relative;z-index:0}#sc-background-container{height:100%;overflow:hidden;z-index:-2}#sc-background,#sc-background-container{top:0;left:0;width:100%;position:absolute}#sc-background{font-size:20pt;z-index:-3;margin:0;padding:0;border:0}
