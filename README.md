@@ -23,7 +23,7 @@ Using the source code in a container as the background for the container.
   </body>
   ```
 
-3. The add `show-code` ID to a container
+3. The add `sc-container` ID to a container
   ```html
   <div id='sc-container'>
         <span>All your content!</span>
@@ -34,11 +34,11 @@ Using the source code in a container as the background for the container.
   ```html
   <head>
         <!-- Head contents -->
-        <link rel="stylesheet" type="text/css" href="./prism.css">
+        <link rel="stylesheet" type="text/css" href="prism.css">
   </head>
   <body>
         <!-- Body contents -->
-        <script type="text/javascript" src="./prism.js"></script>
+        <script type="text/javascript" src="prism.js"></script>
   </body>
   ```
 

@@ -31,6 +31,13 @@ var setupVariables = function() {
     scrollMultiplier = maxBackgroundTop / maxContainerTop;
 };
 
+function prefix (obj, prop, value) {
+	var prefs = ['webkit', 'Moz', 'o', 'ms'];
+	for (var pref in prefs) {
+		obj[prefs[pref] + prop] = value;
+	}
+}
+
 var updateBackground = function() {
     var containerScroll = Math.max(0, scrollTop - containerTop); // Convert to container scroll position
     var backgroundScroll = Math.floor(containerScroll * scrollMultiplier); // Calculate background scroll postion
@@ -39,7 +46,8 @@ var updateBackground = function() {
 
     // Scroll background if it has changed and scroll is not overshooting
     if (top !== oldTop) {
-        backgroundEl.style.top = top + 'px';
+		prefix(backgroundEl.style, 'Transform', 'translate3d(0px, ' + top + 'px, 0px)');
+
         oldTop = top;
         window.requestAnimationFrame(updateBackground);
         isAnimating = true;
@@ -56,8 +64,8 @@ var createBackground = function() {
 };
 
 var parallax = function() {
-    scrollTop = document.body.scrollTop; // Set only for resize/scroll
     if (!isAnimating) {
+		scrollTop = document.body.scrollTop; // Set only for resize/scroll
         updateBackground();
     }
 };
@@ -73,11 +81,16 @@ var setupEventListeners = function() {
 };
 
 var showCode = function() {
-    backgroundEl = createBackground();
-    containerEl = document.getElementById('sc-container');
+	backgroundEl = createBackground();
+	containerEl = document.getElementById('sc-container');
+
+	var bgContainer = document.createElement('div');
+	bgContainer.id = 'sc-background-container';
+
+	bgContainer.appendChild(backgroundEl);
 
     backgroundEl.textContent = containerEl.innerHTML;
-    containerEl.appendChild(backgroundEl);
+    containerEl.appendChild(bgContainer);
 
     setupVariables();
     if(window.matchMedia("(min-width: 800px)").matches) {
