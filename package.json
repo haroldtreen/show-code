@@ -1,6 +1,6 @@
 {
   "name": "show-code",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Use the source code of a container as the background for that container!",
   "main": "src/show-code.js",
   "directories": {
