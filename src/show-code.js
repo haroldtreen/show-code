@@ -17,13 +17,17 @@ var getDimensions = function(elem) {
     return elem.getBoundingClientRect();
 };
 
+var getScroll = function() {
+    return window.pageYOffset;
+};
+
 var setupVariables = function() {
     var clientHeight = window.innerHeight;
 
     var containerDims = getDimensions(containerEl);
     var backgroundDims = getDimensions(backgroundEl);
 
-    containerTop = containerDims.top + document.body.scrollTop; // Want top position when not scrolled
+    containerTop = containerDims.top + getScroll(); // Want top position when not scrolled
 
     var maxContainerTop = containerDims.height - clientHeight;
     maxBackgroundTop = Math.min(0, containerDims.height - backgroundDims.height); // 0 if container is bigger then background
@@ -46,7 +50,7 @@ var updateBackground = function() {
 
     // Scroll background if it has changed and scroll is not overshooting
     if (top !== oldTop) {
-		prefix(backgroundEl.style, 'Transform', 'translate3d(0px, ' + top + 'px, 0px)');
+		prefix(backgroundEl.style, 'Transform', 'translate3d(0,' + top + 'px,0)');
 
         oldTop = top;
         window.requestAnimationFrame(updateBackground);
@@ -65,7 +69,7 @@ var createBackground = function() {
 
 var parallax = function() {
     if (!isAnimating) {
-		scrollTop = document.body.scrollTop; // Set only for resize/scroll
+        scrollTop = getScroll(); // Set only for resize/scroll
         updateBackground();
     }
 };
