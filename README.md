@@ -1,4 +1,7 @@
 # show-code
+[![npm](https://img.shields.io/npm/v/show-code.svg?maxAge=2592000)](https://www.npmjs.com/package/show-code)
+[![npm](https://img.shields.io/npm/dt/show-code.svg?maxAge=2592000)](https://www.npmjs.com/package/show-code)
+
 Using the source code in a container as the background for the container.
 
 ## Usage
